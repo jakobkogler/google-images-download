@@ -767,6 +767,9 @@ class googleimagesdownload:
                 break
             else:
                 #format the item for readability
+                if image_objects[i][1] is None:
+                    i += 1
+                    continue
                 object = self.format_object(image_objects[i])
                 if arguments['metadata']:
                     if not arguments["silent_mode"]:
